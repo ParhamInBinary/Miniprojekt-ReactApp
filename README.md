@@ -1,0 +1,2 @@
+# Miniprojekt-ReactApp
+School project
