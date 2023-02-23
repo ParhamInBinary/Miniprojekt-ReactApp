@@ -1,11 +1,14 @@
 import { createUseStyles } from 'react-jss';
 import { Outlet } from 'react-router-dom';
-import { Header } from './Header';
+import { Sidebar } from './Sidebar';
 
 const useStyles = createUseStyles({
+  body: {
+    display: 'flex',
+  },
   main: {
     display: 'flex',
-    justifyContent: 'center',
+    flexGrow: '1',
     alignItems: 'center',
     flexDirection: 'column',
     color: 'white',
@@ -20,8 +23,8 @@ const useStyles = createUseStyles({
     const styles = useStyles();
 
   return (
-    <div>
-      <Header />
+    <div className={styles.body}>
+      <Sidebar />
 
       <main className={styles.main}>
         <h1 className={styles.h1}>Welcome to STORM Weather App</h1>
