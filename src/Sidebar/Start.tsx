@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 import { Outlet } from "react-router-dom";
-import { Location } from "./Location";
+import { Location } from "./Start/Location";
 
 const useStyles = createUseStyles({
   itemContainer: {

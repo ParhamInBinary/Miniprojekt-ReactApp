@@ -7,9 +7,9 @@ import {
   RouterProvider
 } from "react-router-dom";
 import { App } from './App';
-import { Explore } from './Header/Explore';
+import { Explore } from './Sidebar/Explore';
 import './main.css';
-import { Start } from './Main/Start';
+import { Start } from './Sidebar/Start';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
