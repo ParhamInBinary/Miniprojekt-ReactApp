@@ -1,11 +1,10 @@
 import { createUseStyles } from "react-jss";
 import { NavLink } from "react-router-dom";
-import logo from "./assets/logoImg.jpeg";
+import { Logo } from "./Sidebar/Logo";
 
 const useStyles = createUseStyles({
   ul: {
     display: "flex",
-    justifyContent: "flex-start",
     alignItems: 'center',
     flexDirection: "column",
     backgroundColor: "#CCC",
@@ -17,23 +16,17 @@ const useStyles = createUseStyles({
     width: '15rem'
   },
   li: {
-    padding: '1.5rem 1rem',
-    borderRadius: 20,
+    borderRadius: 10,
+    margin: '.5rem 0',
     width: '100%',
-    marginTop: '.5rem',
-    color: 'white',
-  },
-  link: {
+    backgroundColor: 'white',
+    padding: '.5rem 1rem',
+},
+link: {
     color: 'black',
     textDecoration: 'none',
-    fontSize: 22
-  },
-  activeLink: {
-    backgroundColor: 'green'
-  },
-  img: {
-    height: 70,
-    width: 80,
+    fontSize: 22,
+    width: '100%',
   },
 });
 
@@ -46,7 +39,7 @@ export function Sidebar() {
         <ul className={styles.ul}>
           <li>
             <NavLink to="/">
-              <img src={logo} className={styles.img} />
+              <Logo />
             </NavLink>
           </li>
           <li className={styles.li}>

@@ -1,6 +1,6 @@
 import { createUseStyles } from 'react-jss';
 import { Outlet } from "react-router-dom";
-import { Location } from "./Location";
+import { Favorites } from "./Start/Favorites";
 
 const useStyles = createUseStyles({
   itemContainer: {
@@ -18,7 +18,7 @@ export function Start() {
 
   return (
     <div className={styles.itemContainer}>
-      <Location />
+      <Favorites />
       <Outlet />
     </div>
   );
