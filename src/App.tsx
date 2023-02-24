@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import { Outlet } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
+import { Copyright } from './Footer/Copyright';
 
 const useStyles = createUseStyles({
   body: {
@@ -31,6 +32,9 @@ const useStyles = createUseStyles({
         <p>By PAMEDA</p>
         <Outlet />
       </main>
+      <footer>
+        <Copyright />
+      </footer>
 
     </div>
   )
