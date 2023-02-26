@@ -7,13 +7,9 @@ const useStyles = createUseStyles({
     footer: {
         display: "flex",
         flexGrow: "1",
-        flexDirection: "rov",
-        background: "yellow",
+        flexDirection: "row",
+        
     },
-
-    compName: {
-
-    }
 })
 
 export function Copyright() {
@@ -23,7 +19,6 @@ export function Copyright() {
                 <NavLink to="/">
                     <Logo />
                 </NavLink>
-            <p className={styles.compName}>@STORM By Pameda</p>
         </div>
     )
 }

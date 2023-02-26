@@ -19,6 +19,13 @@ const useStyles = createUseStyles({
     marginTop: '3rem'
   },
 
+  footer: {
+    display: 'inline-flex',
+    backgroundColor: '#E19348',
+    opacity: 0.7,
+    justifyContent: 'space-around',
+  }
+
 })
 
   export function App() {
@@ -33,7 +40,7 @@ const useStyles = createUseStyles({
         <p>By PAMEDA</p>
         <Outlet />
       </main>
-      <footer>
+      <footer className={styles.footer}>
         <Copyright />
         <p><Socials /></p>
       </footer>
