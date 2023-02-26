@@ -5,6 +5,7 @@ import instagram from '../assets/instagram.png';
 import telefon from '../assets/telefon.png';
 
 
+
 const useStyles = createUseStyles({
     social: {
         height: 40,
@@ -18,9 +19,11 @@ export function Socials() {
     return (
         
         <>
-            <img className={styles.social} src={facebook} alt="" />
-            <img className={styles.social} src={instagram} alt="" />
-            <img className={styles.social} src={telefon} alt="" />
+            <NavLink to="/">
+                <img className={styles.social} src={facebook} alt="" />
+                <img className={styles.social} src={instagram} alt="" />
+                <img className={styles.social} src={telefon} alt="" />
+            </NavLink>
 
         </>
     )
