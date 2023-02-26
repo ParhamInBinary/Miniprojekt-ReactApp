@@ -1,6 +1,8 @@
 import { createUseStyles } from 'react-jss';
 import { Outlet } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
+import { Copyright } from './Footer/Copyright';
+import { Socials } from './Footer/Socials';
 
 const useStyles = createUseStyles({
   body: {
@@ -17,6 +19,13 @@ const useStyles = createUseStyles({
     marginTop: '3rem'
   },
 
+  footer: {
+    display: 'inline-flex',
+    backgroundColor: '#E19348',
+    opacity: 0.7,
+    justifyContent: 'space-around',
+  }
+
 })
 
   export function App() {
@@ -31,6 +40,10 @@ const useStyles = createUseStyles({
         <p>By PAMEDA</p>
         <Outlet />
       </main>
+      <footer className={styles.footer}>
+        <Copyright />
+        <p><Socials /></p>
+      </footer>
 
     </div>
   )
