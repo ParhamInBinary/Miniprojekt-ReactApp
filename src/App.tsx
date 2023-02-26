@@ -2,6 +2,7 @@ import { createUseStyles } from 'react-jss';
 import { Outlet } from 'react-router-dom';
 import { Sidebar } from './Sidebar';
 import { Copyright } from './Footer/Copyright';
+import { Socials } from './Footer/Socials';
 
 const useStyles = createUseStyles({
   body: {
@@ -34,6 +35,7 @@ const useStyles = createUseStyles({
       </main>
       <footer>
         <Copyright />
+        <p><Socials /></p>
       </footer>
 
     </div>

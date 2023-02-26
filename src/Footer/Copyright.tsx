@@ -6,7 +6,9 @@ import { Logo } from "../Sidebar/Logo";
 const useStyles = createUseStyles({
     footer: {
         display: "flex",
-        flexGrow: "1"
+        flexGrow: "1",
+        flexDirection: "rov",
+        background: "yellow",
     },
 
     compName: {
@@ -21,7 +23,7 @@ export function Copyright() {
                 <NavLink to="/">
                     <Logo />
                 </NavLink>
-            <p className={styles.compName}>STORM By Pameda</p>
+            <p className={styles.compName}>@STORM By Pameda</p>
         </div>
     )
 }
