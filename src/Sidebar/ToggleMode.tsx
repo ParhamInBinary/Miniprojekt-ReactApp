@@ -1,13 +1,17 @@
-import React, { useState } from "react"
+import { useState } from "react";
 import { createUseStyles } from "react-jss";
 
 
-type Mode = 'dark' | 'light';
 
-export function ToggleMode () {
+export function ToggleMode(): JSX.Element {
+ 
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+
+
   return (
     <div>
-      <button>hej</button>
+      <button>Toggle</button>
     </div>
-  )
+  );
 }
