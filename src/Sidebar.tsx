@@ -49,9 +49,9 @@ export function Sidebar() {
           <li className={styles.li}>
             <NavLink to="explore" className={styles.link}>Explore</NavLink>
           </li>
+          <ToggleMode />
         </ul>
       </nav>
-      <ToggleMode />
     </aside>
   );
 }
