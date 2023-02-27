@@ -16,15 +16,18 @@ const useStyles = createUseStyles({
     color: 'white',
   },
   h1: {
-    marginTop: '3rem'
+    marginTop: '3rem',
+    color: '#B7B78A',
+    fontWeight: 'bold'
   },
 
   footer: {
     display: 'inline-flex',
     backgroundColor: '#E19348',
     opacity: 0.7,
-    justifyContent: 'space-around',
-  }
+    justifyContent: 'space-around'
+  },
+
 
 })
 
@@ -34,10 +37,9 @@ const useStyles = createUseStyles({
   return (
     <div className={styles.body}>
       <Sidebar />
-
       <main className={styles.main}>
         <h1 className={styles.h1}>Welcome to STORM Weather App</h1>
-        <p>By PAMEDA</p>
+        <p className={styles.p}>By PAMEDA</p>
         <Outlet />
       </main>
       <footer className={styles.footer}>
