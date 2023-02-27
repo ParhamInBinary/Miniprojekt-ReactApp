@@ -14,6 +14,7 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     flexDirection: 'column',
     color: 'white',
+    justifyContent: 'space-around',
   },
   h1: {
     marginTop: '3rem'
@@ -23,6 +24,8 @@ const useStyles = createUseStyles({
     display: 'inline-flex',
     backgroundColor: '#E19348',
     opacity: 0.7,
+    alignItems: "center",
+    width: "100%",
     justifyContent: 'space-around',
   }
 
@@ -39,11 +42,12 @@ const useStyles = createUseStyles({
         <h1 className={styles.h1}>Welcome to STORM Weather App</h1>
         <p>By PAMEDA</p>
         <Outlet />
+        <footer className={styles.footer}>
+          <Copyright />
+          <Socials />
+        </footer>
       </main>
-      <footer className={styles.footer}>
-        <Copyright />
-        <p><Socials /></p>
-      </footer>
+
 
     </div>
   )

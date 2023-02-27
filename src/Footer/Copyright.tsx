@@ -15,10 +15,10 @@ const useStyles = createUseStyles({
 export function Copyright() {
     const styles = useStyles();
     return (
-        <div className={styles.footer}>
+        
                 <NavLink to="/">
                     <Logo />
                 </NavLink>
-        </div>
+        
     )
 }
