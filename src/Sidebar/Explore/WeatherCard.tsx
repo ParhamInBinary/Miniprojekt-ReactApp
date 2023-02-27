@@ -1,23 +1,20 @@
 import { createUseStyles } from "react-jss";
+import { useOutletContext } from "react-router-dom";
+import { WeatherCardProps } from "../../types/types";
 
-type WeatherCardProps = {
-  weatherData: WeatherData;
-};
-
-type WeatherData = {
-  name?: string;
-  sys?: { country: string };
-  main?: {
-    temp: number;
-    temp_max: number;
-    temp_min: number;
-  };
-  weather?: { main: string }[];
-  cod?: string;
-};
-
-export function WeatherCard({ weatherData }: WeatherCardProps) {
+export function WeatherCard({ weatherData, showAddBtn }: WeatherCardProps) {
   const styles = useStyles();
+  const context = useOutletContext() as [any, any]
+  const favourites = context[0]
+  const setFavourites = context[1]
+
+
+  const handleAddToFavourites = () => {
+    const clonedFavourites = [...favourites];
+    clonedFavourites.push(weatherData)
+    setFavourites(clonedFavourites)
+
+  }
 
   return (
     <>
@@ -38,9 +35,9 @@ export function WeatherCard({ weatherData }: WeatherCardProps) {
             </p>
           </div>
           <p className={styles.weather}>{weatherData.weather?.[0].main}</p>
-          <button className={styles.addButton}>
+          {showAddBtn && <button className={styles.addButton} onClick={handleAddToFavourites}>
             +
-          </button>
+          </button>}
         </div>
       )}
 
@@ -60,6 +57,7 @@ const useStyles = createUseStyles({
     marginTop: "2rem",
     backgroundColor: "rgba(105,105,105, 0.8)",
     position: "relative",
+    margin: '1rem',
   },
   cityCountry: {
     fontSize: 32,
