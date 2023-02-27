@@ -16,6 +16,39 @@ type WeatherData = {
   cod?: string;
 };
 
+export function WeatherCard({ weatherData }: WeatherCardProps) {
+  const styles = useStyles();
+
+  return (
+    <>
+      {typeof weatherData.main === "undefined" ? (
+        <div>
+          <p>Look up the weather in a city!</p>
+        </div>
+      ) : (
+        <div className={styles.itemContainer}>
+          <p className={styles.cityCountry}>
+            {weatherData.name}, {weatherData.sys?.country}
+          </p>
+          <div className={styles.tempDiv}>
+            <p className={styles.temp}>{Math.round(weatherData.main.temp)}ºC</p>
+            <p className={styles.hl}>
+              H: {Math.round(weatherData.main.temp_max)}ºC / L:{" "}
+              {Math.round(weatherData.main.temp_min)}ºC
+            </p>
+          </div>
+          <p className={styles.weather}>{weatherData.weather?.[0].main}</p>
+          <button className={styles.addButton}>
+            +
+          </button>
+        </div>
+      )}
+
+      {weatherData.cod === "404" ? <p>City not found</p> : <></>}
+    </>
+  );
+}
+
 const useStyles = createUseStyles({
   itemContainer: {
     display: "flex",
@@ -67,36 +100,3 @@ const useStyles = createUseStyles({
     color: "#A1A1A1",
   },
 });
-
-export function WeatherCard({ weatherData }: WeatherCardProps) {
-  const styles = useStyles();
-
-  return (
-    <>
-      {typeof weatherData.main === "undefined" ? (
-        <div>
-          <p>Look up the weather in a city!</p>
-        </div>
-      ) : (
-        <div className={styles.itemContainer}>
-          <p className={styles.cityCountry}>
-            {weatherData.name}, {weatherData.sys?.country}
-          </p>
-          <div className={styles.tempDiv}>
-            <p className={styles.temp}>{Math.round(weatherData.main.temp)}ºC</p>
-            <p className={styles.hl}>
-              H: {Math.round(weatherData.main.temp_max)}ºC / L:{" "}
-              {Math.round(weatherData.main.temp_min)}ºC
-            </p>
-          </div>
-          <p className={styles.weather}>{weatherData.weather?.[0].main}</p>
-          <button className={styles.addButton}>
-            +
-          </button>
-        </div>
-      )}
-
-      {weatherData.cod === "404" ? <p>City not found</p> : <></>}
-    </>
-  );
-}
