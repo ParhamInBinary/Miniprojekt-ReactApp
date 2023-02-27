@@ -66,6 +66,10 @@ const useStyles = createUseStyles({
     left: "80%",
     color: "#A1A1A1",
   },
+  p: {
+    color: 'red'
+  },
+  
 });
 
 export function WeatherCard({ weatherData }: WeatherCardProps) {
@@ -75,7 +79,7 @@ export function WeatherCard({ weatherData }: WeatherCardProps) {
     <>
       {typeof weatherData.main === "undefined" ? (
         <div>
-          <p>Look up the weather in a city!</p>
+          <p >Look up the weather in a city!</p>
         </div>
       ) : (
         <div className={styles.itemContainer}>
@@ -96,7 +100,7 @@ export function WeatherCard({ weatherData }: WeatherCardProps) {
         </div>
       )}
 
-      {weatherData.cod === "404" ? <p>City not found</p> : <></>}
+      {weatherData.cod === "404" ? <p className={styles.p}>City not found</p> : <></>}
     </>
   );
 }
