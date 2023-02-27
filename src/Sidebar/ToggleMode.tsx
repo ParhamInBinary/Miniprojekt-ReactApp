@@ -12,21 +12,21 @@ const useStyles = createUseStyles({
 
 export function ToggleMode(): JSX.Element {
   const styles = useStyles();
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(false);
 
   useEffect(() => {
     const root = document.querySelector("#root");
-    if (isDarkTheme && root) {
+    if (darkTheme && root) {
       root.classList.add(styles.darkTheme);
       root.classList.remove(styles.lightTheme);
     } else if (root) {
       root.classList.add(styles.lightTheme);
       root.classList.remove(styles.darkTheme);
     }
-  }, [isDarkTheme, styles]);
+  }, [darkTheme, styles]);
 
   const handleToggleTheme = () => {
-    setIsDarkTheme(!isDarkTheme);
+    setDarkTheme(!darkTheme);
   };
 
   return (
