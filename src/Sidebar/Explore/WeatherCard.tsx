@@ -54,7 +54,6 @@ const useStyles = createUseStyles({
     padding: "2rem",
     border: "1px solid #DDD",
     borderRadius: 20,
-    marginTop: "2rem",
     backgroundColor: "rgba(105,105,105, 0.8)",
     position: "relative",
     margin: '1rem',
