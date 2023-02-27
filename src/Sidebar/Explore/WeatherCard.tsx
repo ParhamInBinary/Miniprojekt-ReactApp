@@ -69,7 +69,10 @@ const useStyles = createUseStyles({
   p: {
     color: 'red'
   },
-  
+  paragraph: {
+    color: '#B7B78A',
+    fontSize: 20
+  }
 });
 
 export function WeatherCard({ weatherData }: WeatherCardProps) {
@@ -79,7 +82,7 @@ export function WeatherCard({ weatherData }: WeatherCardProps) {
     <>
       {typeof weatherData.main === "undefined" ? (
         <div>
-          <p >Look up the weather in a city!</p>
+          <p className={styles.paragraph}>Look up the weather in a city!</p>
         </div>
       ) : (
         <div className={styles.itemContainer}>
