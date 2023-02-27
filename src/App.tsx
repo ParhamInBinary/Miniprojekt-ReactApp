@@ -27,7 +27,9 @@ const useStyles = createUseStyles({
     opacity: 0.7,
     justifyContent: 'space-around'
   },
-
+  p: {
+    color: '#B7B78A'
+  }
 
 })
 
