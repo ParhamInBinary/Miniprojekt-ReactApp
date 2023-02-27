@@ -1,6 +1,7 @@
 import { createUseStyles } from "react-jss";
 import { NavLink } from "react-router-dom";
 import { Logo } from "./Sidebar/Logo";
+import { ToggleMode } from "./Sidebar/ToggleMode";
 
 const useStyles = createUseStyles({
   ul: {
@@ -50,6 +51,7 @@ export function Sidebar() {
           </li>
         </ul>
       </nav>
+      <ToggleMode />
     </aside>
   );
 }
