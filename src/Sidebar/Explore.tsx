@@ -1,20 +1,11 @@
 import { KeyboardEvent, useState } from "react";
+import { WeatherData } from "../types/types";
 import { Searchbar } from "./Explore/Searchbar";
 import { WeatherCard } from "./Explore/WeatherCard";
 
-type WeatherData = {
-  name?: string;
-  sys?: { country: string };
-  main?: {
-    temp: number;
-    temp_max: number;
-    temp_min: number;
-  };
-  weather?: { main: string }[];
-  cod?: string;
-};
 
 export function Explore() {
+
   const apiKey = "70ac5e6054972523c1ba9f40bb794ba9";
   const [weatherData, setWeatherData] = useState<WeatherData>({});
   const [city, setCity] = useState("");
@@ -35,7 +26,7 @@ export function Explore() {
   return (
     <>
       <Searchbar city={city} setCity={setCity} handleSearch={handleSearch} />
-      <WeatherCard weatherData={weatherData} />
+      <WeatherCard showAddBtn={true} weatherData={weatherData} />
     </>
   );
 }
