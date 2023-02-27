@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Outlet } from 'react-router-dom';
 import { Copyright } from './Footer/Copyright';
@@ -5,6 +6,7 @@ import { Socials } from './Footer/Socials';
 import { Sidebar } from './Sidebar';
 
   export function App() {
+    const [favourites, setFavourites] = useState([])
     const styles = useStyles();
 
   return (
@@ -12,9 +14,7 @@ import { Sidebar } from './Sidebar';
       <Sidebar />
 
       <main className={styles.main}>
-        <h1 className={styles.h1}>Welcome to STORM Weather App</h1>
-        <p>By PAMEDA</p>
-        <Outlet />
+        <Outlet context={[favourites, setFavourites]}/>
       </main>
       <footer className={styles.footer}>
         <Copyright />
@@ -36,10 +36,6 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     color: 'white',
   },
-  h1: {
-    marginTop: '3rem'
-  },
-
   footer: {
     display: 'inline-flex',
     backgroundColor: '#E19348',
