@@ -3,10 +3,10 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   lightTheme: {
-    backgroundColor: "white",
+    backgroundColor: '#EAEAEA',
   },
   darkTheme: {
-    backgroundColor: "black",
+    backgroundColor: '#000000',
   }
 });
 
