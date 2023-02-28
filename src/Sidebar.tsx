@@ -2,6 +2,8 @@ import { createUseStyles } from "react-jss";
 import { NavLink } from "react-router-dom";
 import { Logo } from "./Sidebar/Logo";
 import { ToggleMode } from "./Sidebar/ToggleMode";
+import { HamburgerMenu } from "./Sidebar/HamburgerMenu";
+
 
 export function Sidebar() {
   const styles = useStyles();
@@ -9,6 +11,7 @@ export function Sidebar() {
   return (
     <aside>
       <nav>
+        <HamburgerMenu />
         <ul className={styles.ul}>
           <li>
             <NavLink to="/">

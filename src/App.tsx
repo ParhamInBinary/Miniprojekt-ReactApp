@@ -5,6 +5,7 @@ import { Copyright } from './Footer/Copyright';
 import { Socials } from './Footer/Socials';
 import { Sidebar } from './Sidebar';
 
+
   export function App() {
     const [favourites, setFavourites] = useState([])
     const styles = useStyles();
