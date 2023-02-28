@@ -1,8 +1,12 @@
 import { useOutletContext } from "react-router-dom";
 import { WeatherData } from "../../types/types";
 import { WeatherCard } from "../Explore/WeatherCard";
+import { createUseStyles } from "react-jss";
+
 
 export function Favorites() {
+    const styles = useStyles();
+
     const context = useOutletContext() as [any]
     const favorites = context[0] as WeatherData[]
 
@@ -12,7 +16,13 @@ export function Favorites() {
     
     return (
         <>
-            {favorites.length < 1 ? <p>You have no favorites</p> : mappedFavs}
+            {favorites.length < 1 ? <p className={styles.p}>You have no favorites</p> : mappedFavs}
         </>
     )
 }
+
+const useStyles = createUseStyles({
+    p: {
+        color: '#B7B78A',
+    },
+})
