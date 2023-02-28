@@ -28,7 +28,7 @@ Ni ska i samband med inlämning hålla i en presentation där ni för klasse
 
 1. [x] - Alla punkter för godkänt är uppfyllda.
 2. [x] - Ett “CSS i JS“ lib skall användas för at skriva CSS (ex JSS, Styled-Components, mm).
-3. [] - En ”ErrorBoundry”- komponent ska skapas och användas på minst 3 ställen.
+3. [ ] - En ”ErrorBoundry”- komponent ska skapas och användas på minst 3 ställen.
 4. [x] - Data från ett web-API hämtas och visas på sidan.
 
 ## Installation och uppstart
@@ -37,4 +37,4 @@ Ni ska i samband med inlämning hålla i en presentation där ni för klasse
 2. Kör `npm i` i terminalen.
 3. Kör `npm i react-router-dom` i terminalen.
 4. Kör `npm i react-jss` i terminalen.
-5. Kör `npm run dev` -> ´o´ i terminalen.
+5. Kör `npm run dev` -> `o` i terminalen.
