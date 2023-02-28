@@ -15,12 +15,13 @@ import { Sidebar } from './Sidebar';
 
       <main className={styles.main}>
         <Outlet context={[favourites, setFavourites]}/>
+        
+        <footer className={styles.footer}>
+          <Copyright />
+          <Socials />
+        </footer>
       </main>
 
-      <footer className={styles.footer}>
-        <Copyright />
-        <p><Socials /></p>
-      </footer>
     </div>
   )
 }
@@ -35,15 +36,17 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     flexDirection: 'column',
     color: 'white',
+    position: 'relative',
   },
   footer: {
-    display: 'inline-flex',
-    backgroundColor: '#E19348',
+    display: 'flex',
+    backgroundColor: '#A5A5A5',
     opacity: 0.7,
     alignItems: "center",
-    justifyContent: 'space-around'
+    justifyContent: 'center',
+    gap: '1rem',
+    position: 'absolute',
+    top: '91.3%',
+    width: '100%'
   },
-  p: {
-    color: '#B7B78A'
-  }
 })

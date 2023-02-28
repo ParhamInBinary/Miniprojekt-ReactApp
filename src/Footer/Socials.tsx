@@ -21,5 +21,6 @@ const useStyles = createUseStyles({
   social: {
     height: 40,
     width: 40,
+    margin: '0 .5rem',
   },
 });
