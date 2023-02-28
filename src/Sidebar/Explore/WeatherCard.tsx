@@ -96,4 +96,44 @@ const useStyles = createUseStyles({
     left: "80%",
     color: "#A1A1A1",
   },
+  p: {
+    color: 'red'
+  },
+  paragraph: {
+    color: '#B7B78A',
+    fontSize: 20
+  }
 });
+
+export function WeatherCard({ weatherData }: WeatherCardProps) {
+  const styles = useStyles();
+
+  return (
+    <>
+      {typeof weatherData.main === "undefined" ? (
+        <div>
+          <p className={styles.paragraph}>Look up the weather in a city!</p>
+        </div>
+      ) : (
+        <div className={styles.itemContainer}>
+          <p className={styles.cityCountry}>
+            {weatherData.name}, {weatherData.sys?.country}
+          </p>
+          <div className={styles.tempDiv}>
+            <p className={styles.temp}>{Math.round(weatherData.main.temp)}ºC</p>
+            <p className={styles.hl}>
+              H: {Math.round(weatherData.main.temp_max)}ºC / L:{" "}
+              {Math.round(weatherData.main.temp_min)}ºC
+            </p>
+          </div>
+          <p className={styles.weather}>{weatherData.weather?.[0].main}</p>
+          <button className={styles.addButton}>
+            +
+          </button>
+        </div>
+      )}
+
+      {weatherData.cod === "404" ? <p className={styles.p}>City not found</p> : <></>}
+    </>
+  );
+}
