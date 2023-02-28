@@ -1,8 +1,29 @@
+import { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Outlet } from 'react-router-dom';
-import { Sidebar } from './Sidebar';
 import { Copyright } from './Footer/Copyright';
 import { Socials } from './Footer/Socials';
+import { Sidebar } from './Sidebar';
+
+  export function App() {
+    const [favourites, setFavourites] = useState([])
+    const styles = useStyles();
+
+  return (
+    <div className={styles.body}>
+      <Sidebar />
+
+      <main className={styles.main}>
+        <Outlet context={[favourites, setFavourites]}/>
+      </main>
+
+      <footer className={styles.footer}>
+        <Copyright />
+        <p><Socials /></p>
+      </footer>
+    </div>
+  )
+}
 
 const useStyles = createUseStyles({
   body: {
@@ -15,16 +36,20 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     color: 'white',
   },
+
   h1: {
     marginTop: '3rem',
     color: '#B7B78A',
     fontWeight: 'bold'
   },
 
+
+
   footer: {
     display: 'inline-flex',
     backgroundColor: '#E19348',
     opacity: 0.7,
+    alignItems: "center",
     justifyContent: 'space-around'
   },
   p: {
@@ -52,3 +77,4 @@ const useStyles = createUseStyles({
     </div>
   )
 }
+

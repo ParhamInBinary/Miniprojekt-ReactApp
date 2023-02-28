@@ -1,15 +1,5 @@
 import { createUseStyles } from "react-jss";
 
-const useStyles = createUseStyles({
-  input: {
-    padding: 10,
-    width: "30%",
-    border: "1px solid #DDD",
-    borderRadius: 5,
-    margin: "4rem 0 1rem",
-  },
-});
-
 type SearchbarProps = {
   city: string;
   setCity: (city: string) => void;
@@ -30,3 +20,13 @@ export function Searchbar({ city, setCity, handleSearch }: SearchbarProps) {
     />
   );
 }
+
+const useStyles = createUseStyles({
+  input: {
+    padding: 10,
+    width: "30%",
+    border: "1px solid #DDD",
+    borderRadius: 5,
+    margin: "4rem 0 1rem",
+  },
+});
