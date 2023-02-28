@@ -20,7 +20,7 @@ export function WeatherCard({ weatherData, showAddBtn }: WeatherCardProps) {
     <>
       {typeof weatherData.main === "undefined" ? (
         <div>
-          <p>Look up the weather in a city!</p>
+          <p className={styles.paragraph}>Look up the weather in a city!</p>
         </div>
       ) : (
         <div className={styles.itemContainer}>
@@ -41,7 +41,7 @@ export function WeatherCard({ weatherData, showAddBtn }: WeatherCardProps) {
         </div>
       )}
 
-      {weatherData.cod === "404" ? <p>City not found</p> : <></>}
+      {weatherData.cod === "404" ? <p className={styles.p}>City not found</p> : <></>}
     </>
   );
 }
