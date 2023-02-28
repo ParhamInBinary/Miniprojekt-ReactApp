@@ -30,6 +30,7 @@ import { Sidebar } from './Sidebar';
 const useStyles = createUseStyles({
   body: {
     display: 'flex',
+    
   },
   main: {
     display: 'flex',
@@ -48,6 +49,6 @@ const useStyles = createUseStyles({
     gap: '1rem',
     position: 'absolute',
     top: '91.3%',
-    width: '100%'
+    width: '80%',
   },
 })
