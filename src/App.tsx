@@ -36,15 +36,6 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     color: 'white',
   },
-
-  h1: {
-    marginTop: '3rem',
-    color: '#B7B78A',
-    fontWeight: 'bold'
-  },
-
-
-
   footer: {
     display: 'inline-flex',
     backgroundColor: '#E19348',
@@ -55,26 +46,4 @@ const useStyles = createUseStyles({
   p: {
     color: '#B7B78A'
   }
-
 })
-
-  export function App() {
-    const styles = useStyles();
-
-  return (
-    <div className={styles.body}>
-      <Sidebar />
-      <main className={styles.main}>
-        <h1 className={styles.h1}>Welcome to STORM Weather App</h1>
-        <p className={styles.p}>By PAMEDA</p>
-        <Outlet />
-      </main>
-      <footer className={styles.footer}>
-        <Copyright />
-        <p><Socials /></p>
-      </footer>
-
-    </div>
-  )
-}
-

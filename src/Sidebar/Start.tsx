@@ -26,6 +26,8 @@ const useStyles = createUseStyles({
     backgroundColor: 'rgba(236, 236, 236, 0.4)'
   },
   h1: {
-    marginTop: '3rem'
+    marginTop: '3rem',
+    color: '#B7B78A',
+    fontWeight: 'bold'
   },
 })

@@ -21,6 +21,7 @@ export function Sidebar() {
           <li className={styles.li}>
             <NavLink to="explore" className={styles.link}>Explore</NavLink>
           </li>
+          <ToggleMode />
         </ul>
       </nav>
     </aside>
@@ -54,28 +55,3 @@ link: {
     width: '100%',
   },
 });
-
-export function Sidebar() {
-  const styles = useStyles();
-
-  return (
-    <aside>
-      <nav>
-        <ul className={styles.ul}>
-          <li>
-            <NavLink to="/">
-              <Logo />
-            </NavLink>
-          </li>
-          <li className={styles.li}>
-            <NavLink to="/" className={styles.link}>Start</NavLink>
-          </li>
-          <li className={styles.li}>
-            <NavLink to="explore" className={styles.link}>Explore</NavLink>
-          </li>
-          <ToggleMode />
-        </ul>
-      </nav>
-    </aside>
-  );
-}
