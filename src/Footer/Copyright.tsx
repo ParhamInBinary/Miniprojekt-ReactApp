@@ -20,3 +20,21 @@ const useStyles = createUseStyles({
     flexDirection: "row",
   },
 });
+    footer: {
+        display: "flex",
+        flexGrow: "1",
+        flexDirection: "row",
+        
+    },
+})
+
+export function Copyright() {
+    const styles = useStyles();
+    return (
+        
+                <NavLink to="/">
+                    <Logo />
+                </NavLink>
+        
+    )
+}
