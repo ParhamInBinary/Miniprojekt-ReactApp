@@ -1,7 +1,7 @@
+import { createUseStyles } from "react-jss";
 import { useOutletContext } from "react-router-dom";
 import { WeatherData } from "../../types/types";
 import { WeatherCard } from "../Explore/WeatherCard";
-import { createUseStyles } from "react-jss";
 
 
 export function Favorites() {
