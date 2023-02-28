@@ -7,7 +7,7 @@ export function Start() {
   return (
     <>
     <h1 className={styles.h1}>Welcome to STORM Weather App</h1>
-    <p>By PAMEDA</p>
+    <p className={styles.paragraph}>By PAMEDA</p>
     <div className={styles.itemContainer}>
       <Favorites />
     </div>
@@ -30,4 +30,7 @@ const useStyles = createUseStyles({
     color: '#B7B78A',
     fontWeight: 'bold'
   },
+  paragraph: {
+    color: '#B7B78A'
+  }
 })
