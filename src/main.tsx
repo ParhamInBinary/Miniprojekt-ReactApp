@@ -16,7 +16,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<App />} >
       <Route path="/" element={<Start />} />
       <Route path="explore" element={<Explore />} />
-      <Route path="*" element={<h2>404 not found</h2>} />
+      <Route path="*" element={<h2 style={{color: '#B7B78A'}}>404 not found</h2>} />
     </Route>
   )
 )
