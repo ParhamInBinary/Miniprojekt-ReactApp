@@ -21,12 +21,20 @@ Ni ska i samband med inlämning hålla i en presentation där ni för klasse
 2. [x] - React Router har använts för att dynamiskt uppdatera URL’en.
 3. [x] - Git & GitHub har använts.
 4. [x] - Projektmappen innehåller en README.md fil - (läs ovan för mer info).
-5. [] - Uppgiften lämnas in i tid!
-6. [] - Muntlig presentation är genomförd.
+5. [x] - Uppgiften lämnas in i tid!
+6. [x] - Muntlig presentation är genomförd.
 
 **Krav för väl godkänt:**
 
-1. [] - Alla punkter för godkänt är uppfyllda.
-2. [] - Ett “CSS i JS“ lib skall användas för at skriva CSS (ex JSS, Styled-Components, mm).
+1. [x] - Alla punkter för godkänt är uppfyllda.
+2. [x] - Ett “CSS i JS“ lib skall användas för at skriva CSS (ex JSS, Styled-Components, mm).
 3. [] - En ”ErrorBoundry”- komponent ska skapas och användas på minst 3 ställen.
-4. [] - Data från ett web-API hämtas och visas på sidan.
+4. [x] - Data från ett web-API hämtas och visas på sidan.
+
+## Installation och uppstart
+
+1. Öppna projektmappen i VS Code.
+2. Kör `npm i` i terminalen.
+3. Kör `npm i react-router-dom` i terminalen.
+4. Kör `npm i react-jss` i terminalen.
+5. Kör `npm run dev` -> ´o´ i terminalen.
