@@ -95,6 +95,7 @@ const useStyles = createUseStyles({
     top: "85%",
     left: "80%",
     color: "#A1A1A1",
+    cursor: 'pointer'
   },
   p: {
     color: 'red'
