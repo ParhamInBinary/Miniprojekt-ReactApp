@@ -31,6 +31,7 @@ export function ToggleMode(): JSX.Element {
   return (
     <div>
       <ReactSwitch
+      className={styles.switch}
         checked={darkTheme}
         onChange={handleChange}
         checkedIcon={<BsMoonFill className={styles.iconMoon} />}
@@ -50,6 +51,9 @@ const useStyles = createUseStyles({
   },
   darkTheme: {
     backgroundColor: '#000000',
+  },
+  switch: {
+    marginTop: '2rem',
   },
   iconMoon: {
     width: "20px",
