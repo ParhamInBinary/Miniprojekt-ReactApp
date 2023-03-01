@@ -37,4 +37,6 @@ Ni ska i samband med inlämning hålla i en presentation där ni för klasse
 2. Kör `npm i` i terminalen.
 3. Kör `npm i react-router-dom` i terminalen.
 4. Kör `npm i react-jss` i terminalen.
+5. Kör `npm i react-switch` i terminalen.
+6. Kör `npm i react-icons --save` i terminalen
 5. Kör `npm run dev` -> `o` i terminalen.
