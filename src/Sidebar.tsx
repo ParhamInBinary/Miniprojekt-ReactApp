@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { createUseStyles } from "react-jss";
 import { NavLink } from "react-router-dom";
+import { Socials } from "./Footer/Socials";
 import { Logo } from "./Sidebar/Logo";
 import { ToggleMode } from "./Sidebar/ToggleMode";
-import { useState } from "react";
+
 
 export function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +17,7 @@ export function Sidebar() {
   return (
     <>
       <aside className={`${styles.aside} ${isOpen ? styles.aside: styles.asideHidden}`}>
-        <nav>
+        <nav className={styles.nav}>
           <ul className={styles.ul}>
             <li>
               <NavLink to="/">
@@ -34,6 +36,8 @@ export function Sidebar() {
             </li>
             <ToggleMode />
           </ul>
+          <Socials />
+
         </nav>
       </aside>
       <div className={styles.hamburgerMenu}>
@@ -48,6 +52,10 @@ export function Sidebar() {
 const useStyles = createUseStyles({
   aside: {
     display: "block",
+    height: "100vh",
+  },
+
+  nav: {
   },
   
   hamburgerMenu: {
@@ -106,7 +114,6 @@ const useStyles = createUseStyles({
     padding: "1rem",
     listStyleType: "none",
     fontSize: "1rem",
-    height: "100vh",
     width: "15rem",
   },
   li: {

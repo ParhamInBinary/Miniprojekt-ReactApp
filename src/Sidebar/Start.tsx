@@ -18,12 +18,13 @@ export function Start() {
 const useStyles = createUseStyles({
   itemContainer: {
     display: 'flex',
-    flexWrap: 'wrap',
+    flexWrap: 'nowrap',
     padding: '1rem',
     border: '1px solid #DDD',
     borderRadius: 20,
     marginTop: '5rem',
-    backgroundColor: 'rgba(236, 236, 236, 0.4)'
+    backgroundColor: 'rgba(236, 236, 236, 0.4)',
+    overflow: 'scroll',
   },
   h1: {
     marginTop: '3rem',

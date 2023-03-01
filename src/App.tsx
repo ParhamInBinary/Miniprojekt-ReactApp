@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Outlet } from 'react-router-dom';
-import { Copyright } from './Footer/Copyright';
-import { Socials } from './Footer/Socials';
 import { Sidebar } from './Sidebar';
 
 
@@ -13,16 +11,9 @@ import { Sidebar } from './Sidebar';
   return (
     <div className={styles.body}>
       <Sidebar />
-
       <main className={styles.main}>
-        <Outlet context={[favourites, setFavourites]}/>
-        
-        <footer className={styles.footer}>
-          <Copyright />
-          <Socials />
-        </footer>
+        <Outlet context={[favourites, setFavourites]}/>        
       </main>
-
     </div>
   )
 }
@@ -38,18 +29,7 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     flexDirection: 'column',
     color: 'white',
-    position: 'relative',
     height: '100vh',
   },
-  footer: {
-    display: 'flex',
-    backgroundColor: '#A5A5A5',
-    opacity: 0.7,
-    alignItems: "center",
-    justifyContent: 'center',
-    gap: '1rem',
-    position: 'absolute',
-    top: '91.3%',
-    width: '80%',
-  },
+
 })
