@@ -3,10 +3,13 @@ import { BsFillSunFill, BsMoonFill } from "react-icons/bs";
 import { createUseStyles } from "react-jss";
 import ReactSwitch from "react-switch";
 
+const localStorageKey = "darkTheme";
 
 export function ToggleMode(): JSX.Element {
   const styles = useStyles();
-  const [darkTheme, setDarkTheme] = useState(false);
+  const [darkTheme, setDarkTheme] = useState(
+    localStorage.getItem(localStorageKey) === "true"
+  );
 
   useEffect(() => {
     const root = document.querySelector("#root");
@@ -17,6 +20,8 @@ export function ToggleMode(): JSX.Element {
       root.classList.add(styles.lightTheme);
       root.classList.remove(styles.darkTheme);
     }
+
+    localStorage.setItem(localStorageKey, darkTheme.toString());
   }, [darkTheme, styles]);
 
   const handleChange = () => {
