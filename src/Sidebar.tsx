@@ -7,7 +7,7 @@ import { ToggleMode } from "./Sidebar/ToggleMode";
 
 
 export function Sidebar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const styles = useStyles();
 
   const handleMenuClick = () => {
@@ -36,13 +36,14 @@ export function Sidebar() {
             </li>
             <ToggleMode />
           </ul>
-          <Socials />
-
         </nav>
+          <Socials />
       </aside>
       <div className={styles.hamburgerMenu}>
         <button className={styles.button} onClick={handleMenuClick}>
-          <span className={styles.icon}></span>
+          <div className={styles.icon}></div>
+          <div className={styles.icon}></div>
+          <div className={styles.icon}></div>
         </button>
       </div>
     </>
@@ -51,57 +52,31 @@ export function Sidebar() {
 
 const useStyles = createUseStyles({
   aside: {
-    display: "block",
+    display: "flex",
+    justifyContent: 'space-between',
+    flexDirection: 'column',
+    alignItems: 'center',
     height: "100vh",
+    backgroundColor: "#CCC",
   },
-
   nav: {
+    backgroundColor: 'transparent',
   },
-  
   hamburgerMenu: {
     borderRight: "2px solid #A9A9A9",
     backgroundColor: "#CCC",
-    position: "relative",
-    display: "inline-block",
-    verticalAlign: "middle",
-    marginRight: "20px",
     cursor: "pointer",
-    visibility: 'hidden',
   },
   button: {
-    position: "relative",
-    width: "24px",
-    height: "24px",
-    backgroundColor: "transparent",
-    border: "none",
+    border: 'none',
+    backgroundColor: 'transparent',
   },
   icon: {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: "20px",
-    height: "2px",
-    backgroundColor: "#333",
-    transition: "transform 0.3s ease-in-out",
-    "&:before": {
-      content: '""',
-      position: "absolute",
-      width: "100%",
-      height: "100%",
-      backgroundColor: "#333",
-      transform: "translateY(-8px)",
-      transition: "transform 0.3s ease-in-out",
-    },
-    "&:after": {
-      content: '""',
-      position: "absolute",
-      width: "100%",
-      height: "100%",
-      backgroundColor: "#333",
-      transform: "translateY(8px)",
-      transition: "transform 0.3s ease-in-out",
-    },
+    width: 24,
+    height: 2,
+    backgroundColor: 'transparent',
+    borderBottom: '3px solid black',
+    margin: 5,
   },
   asideHidden:{ 
     display: 'none',
@@ -131,35 +106,15 @@ const useStyles = createUseStyles({
   },
 
   "@media (max-width: 768px)": {
-    
+    aside: {
+      position: 'absolute',
+      zIndex: 1,
+    },
     hamburgerMenu: {
-      display: "inline-block",
-      visibility: 'visible',
-    },
-    links: {
-      position: "fixed",
-      top: "0",
-      left: "0",
-      width: "100vw",
-      height: "100vh",
-      backgroundColor: "#eee",
-      borderRadius: "0",
-      padding: "20px",
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      opacity: 0,
-      visibility: "hidden",
-      transition: "opacity 0.3s ease-in-out, visibility 0.3s ease-in-out",
-      "& a": {
-        color: "#333",
-        textDecoration: "none",
-        margin: "10px 0",
-      },
-    },
-    linksVisible: {
-      opacity: 1,
-      visibility: "visible",
+      zIndex: 2,
+      border: 'none',
+      height: 32,
+      borderRadius: 8
     },
   },
 });

@@ -24,7 +24,7 @@ export function Searchbar({ city, setCity, handleSearch }: SearchbarProps) {
 const useStyles = createUseStyles({
   input: {
     padding: 10,
-    width: "30%",
+    minWidth: "30%",
     border: "1px solid #DDD",
     borderRadius: 5,
     margin: "4rem 0 1rem",

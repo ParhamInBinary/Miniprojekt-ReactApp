@@ -8,19 +8,41 @@ export function Socials() {
   const styles = useStyles();
   return (
     <>
+    <div className={styles.social}>
       <NavLink to="/">
-        <img className={styles.social} src={facebook} alt="" />
-        <img className={styles.social} src={instagram} alt="" />
-        <img className={styles.social} src={telefon} alt="" />
+        <img className={styles.img} src={facebook} alt="" />
       </NavLink>
+
+      <NavLink to="/">
+        <img className={styles.img} src={instagram} alt="" />
+      </NavLink>
+
+      <NavLink to="/">
+        <img className={styles.img} src={telefon} alt="" />
+      </NavLink>
+    </div>
     </>
   );
 }
 
 const useStyles = createUseStyles({
   social: {
-    height: 40,
-    width: 40,
-    margin: '0 .5rem',
+    display: 'flex',
+    justifyContent: 'space-around',
+    backgroundColor: '#CCC',
+    width: '100%',
+    marginLeft: '2rem',
+    marginBottom: '1rem',
   },
+  img: {
+    width: 40,
+    height: 40
+  },
+
+  "@media (max-width: 768px)": {
+    social: {
+      marginLeft: '0',
+    },
+
+  }
 });

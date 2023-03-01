@@ -30,6 +30,7 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     color: 'white',
     height: '100vh',
+    position: 'relative',
   },
 
 })

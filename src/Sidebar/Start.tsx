@@ -17,19 +17,19 @@ export function Start() {
 
 const useStyles = createUseStyles({
   itemContainer: {
-    display: 'flex',
-    flexWrap: 'nowrap',
     padding: '1rem',
     border: '1px solid #DDD',
     borderRadius: 20,
     marginTop: '5rem',
+    marginBottom: '2rem',
     backgroundColor: 'rgba(236, 236, 236, 0.4)',
     overflow: 'scroll',
   },
   h1: {
     marginTop: '3rem',
     color: '#B7B78A',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    textAlign: 'center',
   },
   paragraph: {
     color: '#B7B78A'
