@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { createUseStyles } from "react-jss";
+import ReactSwitch from "react-switch";
 
 const useStyles = createUseStyles({
   lightTheme: {
