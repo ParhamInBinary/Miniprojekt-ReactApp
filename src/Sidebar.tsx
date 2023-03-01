@@ -109,6 +109,7 @@ const useStyles = createUseStyles({
     aside: {
       position: 'absolute',
       zIndex: 1,
+      borderRight: "2px solid #A9A9A9",
     },
     hamburgerMenu: {
       zIndex: 2,
