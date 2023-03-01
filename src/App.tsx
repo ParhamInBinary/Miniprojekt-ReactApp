@@ -39,6 +39,7 @@ const useStyles = createUseStyles({
     flexDirection: 'column',
     color: 'white',
     position: 'relative',
+    height: '100vh',
   },
   footer: {
     display: 'flex',
