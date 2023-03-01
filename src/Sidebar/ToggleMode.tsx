@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
+import { BsFillSunFill, BsMoonFill } from "react-icons/bs";
 import { createUseStyles } from "react-jss";
 import ReactSwitch from "react-switch";
-import { BsMoonFill, BsFillSunFill } from "react-icons/bs";
 
 
 export function ToggleMode(): JSX.Element {
@@ -30,6 +30,10 @@ export function ToggleMode(): JSX.Element {
         onChange={handleChange}
         checkedIcon={<BsMoonFill className={styles.iconMoon} />}
         uncheckedIcon={<BsFillSunFill className={styles.iconSun} />}
+        onColor="#000"
+        offColor="#FFF"
+        onHandleColor="#FFF"
+        offHandleColor="#000"
       />
     </div>
   );
@@ -41,9 +45,6 @@ const useStyles = createUseStyles({
   },
   darkTheme: {
     backgroundColor: '#000000',
-  },
-  switch: {
-    backgroundColor: '#000'
   },
   iconMoon: {
     width: "20px",
@@ -58,5 +59,5 @@ const useStyles = createUseStyles({
     color: 'yellow',
     marginTop: 4,
     marginLeft: 4
-  },
+  }
 });
