@@ -26,13 +26,16 @@ export function ToggleMode(): JSX.Element {
     }
   }, [darkTheme, styles]);
 
-  const handleToggleTheme = () => {
+  const handleChange = () => {
     setDarkTheme(!darkTheme);
   };
 
   return (
     <div>
-      <button onClick={handleToggleTheme}>Toggle</button>
+      <ReactSwitch
+        checked={darkTheme}
+        onChange={handleChange}
+      />
     </div>
   );
 }
