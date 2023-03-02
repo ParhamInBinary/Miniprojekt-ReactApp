@@ -76,5 +76,11 @@ const useStyles = createUseStyles({
   paragraph: {
     color: '#B7B78A',
     fontSize: 20
+  },
+  "@media (max-width: 768px)": {
+    itemContainer: {
+      width: '15rem',
+    },
+
   }
 });
