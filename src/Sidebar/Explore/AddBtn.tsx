@@ -1,31 +1,32 @@
 import { createUseStyles } from "react-jss";
 import { useOutletContext } from "react-router-dom";
-import { WeatherCardProps } from "../../types/types";
+import { WeatherCardProps, WeatherData } from "../../types/types";
 
 export function AddBtn({ weatherData }: WeatherCardProps) {
   const styles = useStyles();
 
-  const context = useOutletContext() as [any, any];
+  const context = useOutletContext() as [WeatherData[], React.Dispatch<React.SetStateAction<WeatherData[]>>];
   const favourites = context[0];
   const setFavourites = context[1];
 
-  const isFavourite = favourites.some((favourite: any) => favourite.name === weatherData.name);
+  const isFavourite = favourites.some((favourite: WeatherData) => favourite.name === weatherData.name);
 
-  const handleAddToFavourites = () => {
-    const clonedFavourites = [...favourites];
-    clonedFavourites.push(weatherData);
-    setFavourites(clonedFavourites);
+  const handleToggleFavourite = () => {
+    if (isFavourite) {
+      const updatedFavourites = favourites.filter((favourite) => favourite.name !== weatherData.name);
+      setFavourites(updatedFavourites);
+    } else {
+      const clonedFavourites = [...favourites];
+      clonedFavourites.push(weatherData);
+      setFavourites(clonedFavourites);
+    }
   };
 
   return (
     <>
-      {isFavourite ? (
-        <span>Added in favourites</span>
-      ) : (
-        <button className={styles.addButton} onClick={handleAddToFavourites}>
-          +
-        </button>
-      )}
+      <button className={styles.addButton} onClick={handleToggleFavourite}>
+        {isFavourite ? "-" : "+"}
+      </button>
     </>
   );
 }
