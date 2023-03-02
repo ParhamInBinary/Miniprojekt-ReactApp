@@ -7,6 +7,7 @@ import {
   RouterProvider
 } from "react-router-dom";
 import { App } from './App';
+import { ErrorBoundary } from './ErrorBoundary';
 import './main.css';
 import { Explore } from './Sidebar/Explore';
 import { Start } from './Sidebar/Start';
@@ -23,6 +24,8 @@ const router = createBrowserRouter(
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <ErrorBoundary>
+      <RouterProvider router={router} />
+    </ErrorBoundary>
   </React.StrictMode>,
 );

@@ -1,15 +1,14 @@
 import { createUseStyles } from "react-jss";
 import { useOutletContext } from "react-router-dom";
-import { WeatherCardProps, WeatherData } from "../../types/types";
+import { Favourites } from "../../App";
+import { WeatherCardProps } from "../../types/types";
 
 export function AddBtn({ weatherData }: WeatherCardProps) {
   const styles = useStyles();
 
-  const context = useOutletContext() as [WeatherData[], React.Dispatch<React.SetStateAction<WeatherData[]>>];
-  const favourites = context[0];
-  const setFavourites = context[1];
+  const [favourites, setFavourites] = useOutletContext<Favourites>();
 
-  const isFavourite = favourites.some((favourite: WeatherData) => favourite.name === weatherData.name);
+  const isFavourite = favourites.some((favourite) => favourite.name === weatherData.name);
 
   const handleToggleFavourite = () => {
     if (isFavourite) {

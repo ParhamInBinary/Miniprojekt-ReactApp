@@ -3,7 +3,9 @@ import { createUseStyles } from 'react-jss';
 import { Outlet } from 'react-router-dom';
 import { ErrorBoundary } from './ErrorBoundary';
 import { Sidebar } from './Sidebar';
+import { WeatherData } from './types/types';
 
+  export type Favourites = [WeatherData[], React.Dispatch<React.SetStateAction<WeatherData[]>>]
 
   export function App() {
     const [favourites, setFavourites] = useState([])
