@@ -58,14 +58,20 @@ const useStyles = createUseStyles({
     alignItems: 'center',
     height: "100vh",
     backgroundColor: "#CCC",
+    position: 'absolute',
+      zIndex: 1,
+      borderRight: "2px solid #A9A9A9"
   },
   nav: {
     backgroundColor: 'transparent',
   },
   hamburgerMenu: {
-    borderRight: "2px solid #A9A9A9",
     backgroundColor: "#CCC",
     cursor: "pointer",
+    zIndex: 2,
+    border: 'none',
+    height: 32,
+    borderRadius: 8
   },
   button: {
     border: 'none',
@@ -103,19 +109,5 @@ const useStyles = createUseStyles({
     textDecoration: "none",
     fontSize: 22,
     width: "100%",
-  },
-
-  "@media (max-width: 768px)": {
-    aside: {
-      position: 'absolute',
-      zIndex: 1,
-      borderRight: "2px solid #A9A9A9",
-    },
-    hamburgerMenu: {
-      zIndex: 2,
-      border: 'none',
-      height: 32,
-      borderRadius: 8
-    },
-  },
+  }
 });

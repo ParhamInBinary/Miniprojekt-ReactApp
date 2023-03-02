@@ -31,18 +31,10 @@ const useStyles = createUseStyles({
     justifyContent: 'space-around',
     backgroundColor: '#CCC',
     width: '100%',
-    marginLeft: '2rem',
     marginBottom: '1rem',
   },
   img: {
     width: 40,
     height: 40
-  },
-
-  "@media (max-width: 768px)": {
-    social: {
-      marginLeft: '0',
-    },
-
   }
 });

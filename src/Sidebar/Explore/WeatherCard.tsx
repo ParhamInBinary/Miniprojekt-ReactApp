@@ -45,6 +45,7 @@ const useStyles = createUseStyles({
     backgroundColor: "rgba(105,105,105, 0.8)",
     position: "relative",
     margin: '1rem',
+    overflowX: 'hidden'
   },
   cityCountry: {
     fontSize: 32,
