@@ -28,6 +28,9 @@ export function Explore() {
     <>
       <ErrorBoundary>
         <Searchbar city={city} setCity={setCity} handleSearch={handleSearch} />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
         <WeatherCard showAddBtn={true} weatherData={weatherData} />
       </ErrorBoundary>
     </>
