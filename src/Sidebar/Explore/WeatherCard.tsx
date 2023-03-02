@@ -37,6 +37,7 @@ const useStyles = createUseStyles({
   itemContainer: {
     display: "flex",
     flexDirection: "column",
+    width: '20rem',
     alignItems: "center",
     padding: "2rem",
     border: "1px solid #DDD",
