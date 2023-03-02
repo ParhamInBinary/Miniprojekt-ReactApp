@@ -2,12 +2,14 @@ import { createUseStyles } from "react-jss";
 import { useOutletContext } from "react-router-dom";
 import { WeatherCardProps } from "../../types/types";
 
-export function AddBtn({ weatherData, showAddBtn }: WeatherCardProps) {
+export function AddBtn({ weatherData }: WeatherCardProps) {
   const styles = useStyles();
 
   const context = useOutletContext() as [any, any];
   const favourites = context[0];
   const setFavourites = context[1];
+
+  const isFavourite = favourites.some((favourite: any) => favourite.name === weatherData.name);
 
   const handleAddToFavourites = () => {
     const clonedFavourites = [...favourites];
@@ -17,7 +19,9 @@ export function AddBtn({ weatherData, showAddBtn }: WeatherCardProps) {
 
   return (
     <>
-      {showAddBtn && (
+      {isFavourite ? (
+        <span>Added in favourites</span>
+      ) : (
         <button className={styles.addButton} onClick={handleAddToFavourites}>
           +
         </button>
