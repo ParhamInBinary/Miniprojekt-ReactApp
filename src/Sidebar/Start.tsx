@@ -1,4 +1,5 @@
 import { createUseStyles } from 'react-jss';
+import { ErrorBoundary } from '../ErrorBoundary';
 import { Favorites } from "./Start/Favorites";
 
 export function Start() {
@@ -9,7 +10,9 @@ export function Start() {
     <h1 className={styles.h1}>Welcome to STORM Weather App</h1>
     <p className={styles.paragraph}>By PAMEDA</p>
     <div className={styles.itemContainer}>
-      <Favorites />
+      <ErrorBoundary>
+        <Favorites />
+      </ErrorBoundary>
     </div>
     </>
   );
