@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { createUseStyles } from 'react-jss';
 import { Outlet } from 'react-router-dom';
+import { ErrorBoundary } from './ErrorBoundary';
 import { Sidebar } from './Sidebar';
 
 
@@ -10,7 +11,9 @@ import { Sidebar } from './Sidebar';
 
   return (
     <div className={styles.body}>
-      <Sidebar />
+      <ErrorBoundary>
+        <Sidebar />
+      </ErrorBoundary>
       <main className={styles.main}>
         <Outlet context={[favourites, setFavourites]}/>        
       </main>

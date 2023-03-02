@@ -1,4 +1,5 @@
 import { KeyboardEvent, useState } from "react";
+import { ErrorBoundary } from "../ErrorBoundary";
 import { WeatherData } from "../types/types";
 import { Searchbar } from "./Explore/Searchbar";
 import { WeatherCard } from "./Explore/WeatherCard";
@@ -25,8 +26,13 @@ export function Explore() {
 
   return (
     <>
-      <Searchbar city={city} setCity={setCity} handleSearch={handleSearch} />
-      <WeatherCard showAddBtn={true} weatherData={weatherData} />
+      <ErrorBoundary>
+        <Searchbar city={city} setCity={setCity} handleSearch={handleSearch} />
+      </ErrorBoundary>
+      
+      <ErrorBoundary>
+        <WeatherCard showAddBtn={true} weatherData={weatherData} />
+      </ErrorBoundary>
     </>
   );
 }
