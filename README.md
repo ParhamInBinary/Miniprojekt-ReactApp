@@ -1,19 +1,13 @@
-## Schoolproject
+## Schoolproject Javascrip fördjupning 
 
-# Miniprojekt 1 - React App
-I den här laborationen ska ni i grupp om tre skapa en Webb-App med hjälp av React och Typescript. Vad ni väljer att skapa är valfritt däremot ska ni skapa minst 8 stycken komponenter varav minst 3 av komponenterna är ”statefulla"-komponenter.
+# Storm Wheater App - React App
+Vi har valt att göra en väderapp där man ska kunna söka upp en stad för att se vädret, man kan också spara städer som 
+favoriter i sin start för att snabbt komma åt dom. I start kan man dessuton ta bort dom städer man inte längre vill ha som favoriter.
 
-Läs noga igenom hela uppgiftsbeskrivningen innan ni börjar.
 
-**Inlämning**
+**Netlifly länk**
 
-För att bli godkänd på den här uppgiften MÅSTE ni använda GIT och GitHub. Inlämningen sker som vanligt via läroplattformen. I din projektmapp ska det finnas (utöver all kod) en README.md fil. Den ska innehålla en titel, beskrivning av projektet, info om hur projektet byggs och körs, samt en demo länk (Netlify).
-
-OBS: Alla krav ska läggas till i readme filen och de som är gjorda ska kryssas för.
-
-**Presentation**
-
-Ni ska i samband med inlämning hålla i en presentation där ni för klassen presenterar er Web-Applikation, vilka komponenter ni har skapat och hur dom används. Ni ska även presentera hur ni har planerat, genomfört och strukturerat ert arbete. Dessutom ska presentationen innefatta en reflekterande del. Varje grupp har ca 15 min på sig. Har ni valt att använda ett “CSS i JS” lib så ska det kortfattat presenteras också.
+Här är vår länk till appen
 
 **Krav för godkänd:**
 
