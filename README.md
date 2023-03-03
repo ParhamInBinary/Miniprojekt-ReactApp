@@ -1,10 +1,15 @@
-## Schoolproject Javascrip fördjupning 
+## Schoolproject Javascript fördjupning 
 
 [DEMO LINK](https://stormweatherappbypameda.netlify.app)
 
 # Storm Weather App - React App
-Vi har valt att göra en väderapp där man ska kunna söka upp en stad för att se vädret, man kan också spara städer som 
-favoriter i sin start för att snabbt komma åt dom. I start kan man dessuton ta bort dom städer man inte längre vill ha som favoriter.
+Vi har utvecklat en webb applikation som låter användaren söka efter vädret i en specifik stad, spara städer som favoriter och ta bort dem från listan om de inte längre önskas. Applikationen är praktisk för personer som vill hålla sig uppdaterade om det aktuella vädret.
+
+## Contributers
+
+- [Parham Berenjian](#https://github.com/ParhamInBinary)
+- [Mergim Shala](#https://github.com/mergimshalaa)
+- [Daniel Vanpalo](#https://github.com/Knightrider85)
 
 **Krav för godkänd:**
 
