@@ -5,7 +5,7 @@
 # Storm Weather App - React App
 Vi har utvecklat en webb applikation som låter användaren söka efter vädret i en specifik stad, spara städer som favoriter och ta bort dem från listan om de inte längre önskas. Applikationen är praktisk för personer som vill hålla sig uppdaterade om det aktuella vädret.
 
-## Contributers
+## Contributors
 
 - [Parham Berenjian](https://github.com/ParhamInBinary)
 - [Mergim Shala](https://github.com/mergimshalaa)
