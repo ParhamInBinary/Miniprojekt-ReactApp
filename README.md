@@ -7,9 +7,9 @@ Vi har utvecklat en webb applikation som låter användaren söka efter vädret 
 
 ## Contributers
 
-- [Parham Berenjian](#https://github.com/ParhamInBinary)
-- [Mergim Shala](#https://github.com/mergimshalaa)
-- [Daniel Vanpalo](#https://github.com/Knightrider85)
+- [Parham Berenjian](https://github.com/ParhamInBinary)
+- [Mergim Shala](https://github.com/mergimshalaa)
+- [Daniel Vanpalo](https://github.com/Knightrider85)
 
 **Krav för godkänd:**
 
